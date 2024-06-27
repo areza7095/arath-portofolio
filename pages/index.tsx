@@ -123,7 +123,7 @@ export default function Home() {
         <meta property="og:url" content={`https://arath.me`} />
         <link rel="canonical" href={`https://arath.me`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Manu Arora" />
+        <meta property="og:site_name" content="Ahmad Reza A" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
