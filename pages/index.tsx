@@ -109,7 +109,7 @@ export default function Home() {
   const meta = {
     title: "Ahmad Reza A - Software Engineer",
     description: `I've been working on Software development for 3 years straight. Get in touch with me to know more.`,
-    image: "/titofCercle.png",
+    image: "/cujsubtch.png",
     type: "website",
   };
   const isProd = process.env.NODE_ENV === "production";
