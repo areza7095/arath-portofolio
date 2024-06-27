@@ -11,6 +11,7 @@
   "engines": {
     "node": "18.x"
   },
+  
   "dependencies": {
     "@react-google-maps/api": "^2.12.1",
     "@types/react-leaflet": "^2.8.2",
