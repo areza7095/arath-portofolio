@@ -102,7 +102,7 @@ export default function Home() {
   }, [context, context.sharedState]);
 
   useEffect(() => {
-    Aos.init({ duration: 2000, once: true });
+    // Aos.init({ duration: 2000, once: true });
   }, []);
 
   console.log("website is rendering...");
