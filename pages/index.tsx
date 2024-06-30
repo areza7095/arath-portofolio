@@ -102,7 +102,7 @@ export default function Home() {
   }, [context, context.sharedState]);
 
   useEffect(() => {
-    // Aos.init({ duration: 2000, once: true });
+    Aos.init({ duration: 2000, once: true });
   }, []);
 
   console.log("website is rendering...");
@@ -116,7 +116,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
@@ -132,7 +132,7 @@ export default function Home() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-      </Head>
+      </Head> */}
 
       {!isBlackListed ? (
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">

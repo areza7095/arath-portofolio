@@ -30,7 +30,7 @@ export default function AboutMe(props) {
             <div className="font-Header ">
               <span className="text-gray-400 ">
                 Hello! My name is <span className="text-AAsecondary">Reza</span>, and I am a passionate software developer and problem solver,
-                dedicated to creating impactful digital experiences. My journey in technology began in high
+                dedicated to creating impactful digital experiences. My journey in technology began in Junior high
                 school with a focus on Ethical Hacking using <span className="text-AAsecondary">Kali Linux OS</span>, where I quickly realized the importance
                 of programming skills. This marked the beginning of my programming career.
               </span>
