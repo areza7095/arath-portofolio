@@ -134,7 +134,7 @@ export default function Home() {
         <meta name="twitter:image" content={meta.image} />
       </Head> */}
 
-      {!isBlackListed ? (
+      {/* {!isBlackListed ? ( */}
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
           {/* {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>} */}
           {/* {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>} */}
@@ -152,9 +152,9 @@ export default function Home() {
           )}
           {!isProd && <ScreenSizeDetector />} */}
         </div>
-      ) : (
+      {/* ) : (
         <Maintenance />
-      )}
+      )} */}
     </>
   );
 }
