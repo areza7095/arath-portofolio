@@ -37,69 +37,69 @@ export default function Home() {
 
   // this userEffect will be called to get the user location, so we can check if he is from the blackList,
   // this will only run if NEXT_PUBLIC_BLACKLIST_COUNTRIES is not empty
-  useEffect(() => {
-    if (!IsBlackListEmpty) {
-      const fetchData = async () => {
-        try {
-          const IP_Address = async () => {
-            return fetch("https://api.ipify.org/?format=json")
-              .then(res => res.json())
-              .then(data => data.ip);
-          };
+  // useEffect(() => {
+  //   if (!IsBlackListEmpty) {
+  //     const fetchData = async () => {
+  //       try {
+  //         const IP_Address = async () => {
+  //           return fetch("https://api.ipify.org/?format=json")
+  //             .then(res => res.json())
+  //             .then(data => data.ip);
+  //         };
 
-          const response = await fetch("/api/userInfoByIP/" + (await IP_Address())); // Replace with your actual API endpoint
-          const data = await response.json();
-          setUserData(data);
-        } catch (error) {
-          console.error("Error fetching data location and ip address:", error);
-          // Handle errors as needed
-        }
-      };
+  //         const response = await fetch("/api/userInfoByIP/" + (await IP_Address())); // Replace with your actual API endpoint
+  //         const data = await response.json();
+  //         setUserData(data);
+  //       } catch (error) {
+  //         console.error("Error fetching data location and ip address:", error);
+  //         // Handle errors as needed
+  //       }
+  //     };
 
-      fetchData();
-    }
-  }, [IsBlackListEmpty]); // Empty dependency array ensures that this effect runs once when the component mounts
+  //     fetchData();
+  //   }
+  // }, [IsBlackListEmpty]); // Empty dependency array ensures that this effect runs once when the component mounts
 
   // this useEffect will be called when userData is set
-  useEffect(() => {
-    // this will only run if NEXT_PUBLIC_BLACKLIST_COUNTRIES is not empty
-    if (!IsBlackListEmpty) {
-      if (userData) {
-        // check if the user country is in the blackList
-        if (process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES.includes(userData.country)) {
-          // set isBlackListed to true
-          setIsBlackListed(true);
-        }
-      }
-    }
-  }, [IsBlackListEmpty, userData]);
+  // useEffect(() => {
+  //   // this will only run if NEXT_PUBLIC_BLACKLIST_COUNTRIES is not empty
+  //   if (!IsBlackListEmpty) {
+  //     if (userData) {
+  //       // check if the user country is in the blackList
+  //       if (process.env.NEXT_PUBLIC_BLACKLIST_COUNTRIES.includes(userData.country)) {
+  //         // set isBlackListed to true
+  //         setIsBlackListed(true);
+  //       }
+  //     }
+  //   }
+  // }, [IsBlackListEmpty, userData]);
 
-  useEffect(() => {
-    // remove the interval Cookie timer setter when
-    clearInterval(context.sharedState.userdata.timerCookieRef.current);
-    if (typeof window !== "undefined") {
-      // remove UserDataPuller project EventListeners
-      window.removeEventListener("resize", context.sharedState.userdata.windowSizeTracker.current);
-      window.removeEventListener("mousemove", context.sharedState.userdata.mousePositionTracker.current, false);
-      // remove Typing project EventListeners
-      window.removeEventListener("resize", context.sharedState.typing.eventInputLostFocus);
-      document.removeEventListener("keydown", context.sharedState.typing.keyboardEvent);
-    }
-    setTimeout(() => {
-      setShowElement(true);
-    }, 4500);
+  // useEffect(() => {
+  //   // remove the interval Cookie timer setter when
+  //   clearInterval(context.sharedState.userdata.timerCookieRef.current);
+  //   if (typeof window !== "undefined") {
+  //     // remove UserDataPuller project EventListeners
+  //     window.removeEventListener("resize", context.sharedState.userdata.windowSizeTracker.current);
+  //     window.removeEventListener("mousemove", context.sharedState.userdata.mousePositionTracker.current, false);
+  //     // remove Typing project EventListeners
+  //     window.removeEventListener("resize", context.sharedState.typing.eventInputLostFocus);
+  //     document.removeEventListener("keydown", context.sharedState.typing.keyboardEvent);
+  //   }
+  //   setTimeout(() => {
+  //     setShowElement(true);
+  //   }, 4500);
 
-    setTimeout(() => {
-      setShowThisCantBeReached(false);
-    }, 5400);
-    // ? INFORMATIONAL next function will show the component after changing the state of ShowMe
-    setTimeout(() => {
-      setShowElement(false);
-      setShowMe(true);
-      context.sharedState.finishedLoading = true;
-      context.setSharedState(context.sharedState);
-    }, 10400);
-  }, [context, context.sharedState]);
+  //   setTimeout(() => {
+  //     setShowThisCantBeReached(false);
+  //   }, 5400);
+  //   // ? INFORMATIONAL next function will show the component after changing the state of ShowMe
+  //   setTimeout(() => {
+  //     setShowElement(false);
+  //     setShowMe(true);
+  //     context.sharedState.finishedLoading = true;
+  //     context.setSharedState(context.sharedState);
+  //   }, 10400);
+  // }, [context, context.sharedState]);
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
