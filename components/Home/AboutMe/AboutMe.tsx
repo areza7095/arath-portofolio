@@ -38,7 +38,7 @@ export default function AboutMe(props) {
             <div className="font-Header ">
               <span className="text-gray-400 ">
                 Throughout my career, I have worked across various industries, refining my expertise in <span className="text-AAsecondary">Web Development</span>, 
-                <span className="text-AAsecondary"> IoT</span>, <span className="text-AAsecondary">PowerApps</span>, and <span className="text-AAsecondary">Azure</span>, with a particular focus on <span className="text-AAsecondary">backend development</span>. I have had the privilege of contributing 
+                <span className="text-AAsecondary"> IoT</span>, <span className="text-AAsecondary">PowerApps</span>, and <span className="text-AAsecondary">Azure</span>, with a particular focus on <span className="text-AAsecondary">Backend Development</span>. I have had the privilege of contributing 
                 to innovative projects and collaborating with esteemed organizations. My dedication to continuous learning and my 
                 enthusiasm for leveraging cutting-edge technologies drive me to make a positive impact and advance the field of technology.
               </span>
