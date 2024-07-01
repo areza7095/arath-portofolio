@@ -54,7 +54,7 @@ export default function MyName(props: { finishedLoading: boolean }) {
       >
         I&apos;m a <span className="text-AAsecondary">software developer </span>with strong problem-solving skills and  
         extensive experience in creating <br className="2xl:block hidden" />
-        digital experiences. I have expertise in <span className="text-AAsecondary">web development</span>, <span className="text-AAsecondary">IoT</span>, 
+        digital experiences. I have expertise in <span className="text-AAsecondary">Web Development</span>, <span className="text-AAsecondary">IoT</span>, 
         <span className="text-AAsecondary"> PowerApps</span>, and <span className="text-AAsecondary">Azure</span>.
         My current focus is on developing and designing innovative <span className="text-AAsecondary">applications</span> that leverage these technologies to  <span className="text-AAsecondary">solve complex problems</span> and <span className="text-AAsecondary">deliver seamless</span> user experiences.
       </motion.h3>
