@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import AppContext from "../components/AppContextFolder/AppContext";
 import { useRef, useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function MyApp({ Component, pageProps }) {
   const timerCookie = useRef(null);
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppContext.Provider value={{ sharedState, setSharedState }}>
       <Component {...pageProps} />
+      <SpeedInsights />
       <Analytics />
     </AppContext.Provider>
   );
