@@ -139,18 +139,18 @@ export default function Home() {
           {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
           {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
-          {/* <MyName finishedLoading={context.sharedState.finishedLoading} /> */}
-          {/* <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} /> */}
+          <MyName finishedLoading={context.sharedState.finishedLoading} />
+          <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} />
           {context.sharedState.finishedLoading ? <AboutMe ref={aboutRef} /> : <></>}
-          {/* {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>} */}
-          {/* {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>} */}
-          {/* {context.sharedState.finishedLoading ? <GetInTouch /> : <></>} */}
-          {/* {context.sharedState.finishedLoading ? (
+          {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
+          {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
+          {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
+          {context.sharedState.finishedLoading ? (
             <Footer githubUrl={"https://github.com/areza7095"} hideSocialsInDesktop={true} />
           ) : (
             <></>
           )}
-          {!isProd && <ScreenSizeDetector />} */}
+          {!isProd && <ScreenSizeDetector />}
         </div>
       {/* ) : (
         <Maintenance />
