@@ -106,17 +106,17 @@ export default function Home() {
   }, []);
 
   // console.log("website is rendering...");
-  // const meta = {
-  //   title: "Ahmad Reza A - Software Engineer",
-  //   description: `I've been working on Software development for 3 years straight. Get in touch with me to know more.`,
-  //   image: "/cujsubtch.png",
-  //   type: "website",
-  // };
+  const meta = {
+    title: "Ahmad Reza A - Software Engineer",
+    description: `I've been working on Software development for 3 years straight. Get in touch with me to know more.`,
+    image: "/cujsubtch.png",
+    type: "website",
+  };
   const isProd = process.env.NODE_ENV === "production";
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
@@ -132,12 +132,12 @@ export default function Home() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-      </Head> */}
+      </Head>
 
       {/* {!isBlackListed ? ( */}
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-          {/* {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>} */}
-          {/* {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>} */}
+          {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
+          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
           {/* <MyName finishedLoading={context.sharedState.finishedLoading} /> */}
           {/* <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} /> */}
