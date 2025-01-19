@@ -7,6 +7,14 @@ export default function SolidSportOrganizer() {
     {
       text: "I set the match system at the event to keep it running optimally, and set up the database of the game participants so that it remains optimal for the system to use, and set the scoreboard during matches with a system that is run on a machine and many more, with MySQL, SET Sportdata",
       keywords: ["MySQL", "SET Sportdata"],
+    },
+    {
+      text: "Managed the match system at events to ensure optimal performance and set up the database for game participants.",
+      keywords: [],
+    },
+    {
+      text: "Operated the scoreboard during matches using a machine-run system to enhance the overall experience.",
+      keywords: [],
     }
   ];
 

@@ -1,21 +1,22 @@
 import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import ArrowIcon from "../../Icons/ArrowIcon";
-import InternPTInfimediaSolusiPratama from "./Descriptions/InternPTInfimediaSolusiPratama";
+import InternPTInfimediaSolusiPratama from "./Descriptions/PTInfimediaSolusiPratama";
 import SolidSportOrganizer from "./Descriptions/SolidSportOrganizer";
-import PTInfimediaSolusiPratamaJuniorDev from "./Descriptions/PTInfimediaSolusiPratamaJuniorDev";
+import PTInfimediaSolusiPratama from "./Descriptions/PTInfimediaSolusiPratama";
+import PTMitraIntegrasiInformatika from "./Descriptions/PTMitraIntegrasiInformatika";
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
-      case "InternPTInfimediaSolusiPratama":
-        return <InternPTInfimediaSolusiPratama />;
+      case "PTInfimediaSolusiPratama":
+        return <PTInfimediaSolusiPratama />;
       case "SolidSportOrganizer":
         return <SolidSportOrganizer />;
-      case "PTInfimediaSolusiPratama":
-        return <PTInfimediaSolusiPratamaJuniorDev />;
+      case "PTMitraIntegrasiInformatika":
+        return <PTMitraIntegrasiInformatika />;
     }
   };
   const [DescriptionJob, setDescriptionJob] = React.useState("InternPTInfimediaSolusiPratama");
@@ -108,7 +109,7 @@ const CompaniesBar = props => {
             CompanyName="PT Infimedia Solusi Pratama"
             BarPosition={-12}
             BarAvobePosition={1}
-            DescriptionJob="InternPTInfimediaSolusiPratama"
+            DescriptionJob="PTInfimediaSolusiPratama"
             CompanyNameBackgroundColorGreen={[true, false, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
@@ -121,13 +122,22 @@ const CompaniesBar = props => {
             CompanyNameBackgroundColorGreen={[false, true, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
+          <CompanyButton
+            ButtonOrderOfcompanyNameBackgroundColorGreen={2}
+            CompanyName="PT Mitra Integrasi Informatika"
+            BarPosition={76}
+            BarAvobePosition={257}
+            DescriptionJob="PTMitraIntegrasiInformatika"
+            CompanyNameBackgroundColorGreen={[false, false, true, false, false, false]}
+            setDescriptionJob={props.setDescriptionJob}
+          />
           {/* <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
             CompanyName="PT Infimedia Solusi Pratama"
-            BarPosition={76}
+            BarPosition={120}
             BarAvobePosition={257}
             DescriptionJob="PTInfimediaSolusiPratama"
-            CompanyNameBackgroundColorGreen={[false, false, true, false, false, false]}
+            CompanyNameBackgroundColorGreen={[false, false, false, true, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           /> */}
         </div>
